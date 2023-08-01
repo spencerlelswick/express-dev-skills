@@ -8,13 +8,7 @@
 </head>
 
 <body>
-  <% for( let i=0; i < skills.length; i++ ) { %>
-    <p>
-      <a href="/skills/<%= skills[i].id %>">
-        <%= skills[i].name %>
-      </a> | <%= skills[i].level %>
-    </p>
-    <% } %>
+  <%= skill.name %>, <%= skill.level %>/10
 </body>
 
 </html>
