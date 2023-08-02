@@ -1,7 +1,9 @@
-<% for( let i=0; i < skills.length; i++ ) { %>
-  <p>
-    <a href="/skills/<%= skills[i].id %>">
-      <%= skills[i].name %>
-    </a> | <%= skills[i].level %>
-  </p>
-  <% } %>
+<%- include('../partials/header') %>
+  <% for( let i=0; i < skills.length; i++ ) { %>
+    <p>
+      <a href="/skills/<%= skills[i].id %>">
+        <%= skills[i].name %>
+      </a> | <%= skills[i].level %>
+    </p>
+    <% } %>
+      <%- include('../partials/footer') %>
