@@ -1,20 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-
-<body>
-  <% for( let i=0; i < skills.length; i++ ) { %>
-    <p>
-      <a href="/skills/<%= skills[i].id %>">
-        <%= skills[i].name %>
-      </a> | <%= skills[i].level %>
-    </p>
-    <% } %>
-</body>
-
-</html>
+<% for( let i=0; i < skills.length; i++ ) { %>
+  <p>
+    <a href="/skills/<%= skills[i].id %>">
+      <%= skills[i].name %>
+    </a> | <%= skills[i].level %>
+  </p>
+  <% } %>
