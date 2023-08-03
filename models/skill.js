@@ -8,7 +8,8 @@ module.exports = {
   getAll,
   getOne,
   create,
-  remove
+  remove,
+  update
 };
 
 function getAll() {
@@ -28,4 +29,8 @@ function create(skill) {
 function remove(id) {
   const removeSkill = skills.findIndex(s => s.id === id)
   skills.splice(removeSkill, 1)
+}
+
+function update(id) {
+  console.log(id)
 }

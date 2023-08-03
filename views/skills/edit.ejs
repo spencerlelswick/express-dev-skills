@@ -1,0 +1,9 @@
+<%- include('../partials/header') %>
+
+  <form action="/skills/<%= skill.id %>?_method=PUT" method="POST" autocomplete="off">
+    <input type="text" value="<%= skill.name %>" name="name">
+    <input type="number" value="<%= skill.level %>" name="level">
+    <button type="submit">Create Skill</button>
+  </form>
+
+  <%- include('../partials/footer') %>
