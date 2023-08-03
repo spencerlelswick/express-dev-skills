@@ -41,5 +41,7 @@ function edit(req, res) {
 }
 
 function update(req, res) {
-  console.log('test')
+  const id = Number(req.params.id)
+  Skill.update(id, req.body)
+  res.redirect('/skills')
 }

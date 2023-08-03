@@ -31,6 +31,10 @@ function remove(id) {
   skills.splice(removeSkill, 1)
 }
 
-function update(id) {
-  console.log(id)
+function update(id, data) {
+  console.log(id, data)
+  const index = skills.findIndex(s => s.id === id)
+  const updateSkill = { ...skills[index], ...data }
+  console.log(updateSkill)
+  skills.splice(index, 1, updateSkill)
 }
