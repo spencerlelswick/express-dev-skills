@@ -1,3 +1,13 @@
 <%- include('../partials/header') %>
-  <%= skill.name %>, <%= skill.level %>/10 - <a href="/skills/<%= skill.id %>/edit">EDIT</a>
-      <%- include('../partials/footer') %>
+  <div class="container d-flex flex-row p-2 align-content-center justify-content-between">
+
+    <div class="p-2 fs-3 container d-flex justify-content-around">
+      <p>
+        <%= skill.name %>
+      </p>
+      </p>
+      level: <%= skill.level %>/10</p>
+        <a href="/skills/<%= skill.id %>/edit">EDIT</a>
+    </div>
+  </div>
+  <%- include('../partials/footer') %>
