@@ -32,7 +32,7 @@ function create(req, res) {
 }
 
 function deleteOne(req, res) {
-  Skill.remove(req.params.id)
+  Skill.remove(Number(req.params.id))
   res.redirect('/skills')
 }
 
@@ -41,7 +41,6 @@ function edit(req, res) {
 }
 
 function update(req, res) {
-  const id = Number(req.params.id)
-  Skill.update(id, req.body)
+  Skill.update(Number(req.params.id), req.body)
   res.redirect('/skills')
 }
