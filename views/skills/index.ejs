@@ -1,6 +1,10 @@
 <%- include('../partials/header') %>
   <% for( let i=0; i < skills.length; i++ ) { %>
+    <form action="/skills/<%= skills[i].id %>?_method=DELETE" method="POST">
+      <button type="submit">X</button>
+    </form>
     <p>
+
       <a href="/skills/<%= skills[i].id %>">
         <%= skills[i].name %>
       </a> | <%= skills[i].level %>

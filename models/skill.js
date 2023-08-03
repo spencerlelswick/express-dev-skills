@@ -7,7 +7,8 @@ const skills = [
 module.exports = {
   getAll,
   getOne,
-  create
+  create,
+  remove
 };
 
 function getAll() {
@@ -22,4 +23,9 @@ function create(skill) {
   const newSkill = { ...skill }
   newSkill.id = skills.length + 1
   skills.push(newSkill)
+}
+
+function remove(id) {
+  const removeSkill = skills.findIndex(s => s.id === id)
+  skills.splice(removeSkill, 1)
 }
