@@ -1,9 +1,14 @@
 <%- include('../partials/header') %>
+  <div class="container d-flex flex-row p-2 align-content-center justify-content-between">
 
-  <form action="/skills/<%= skill.id %>?_method=PUT" method="POST" autocomplete="off">
-    <input type="text" value="<%= skill.name %>" name="name">
-    <input type="number" value="<%= skill.level %>" name="level">
-    <button type="submit">Create Skill</button>
-  </form>
+    <form action="/skills/<%= skill.id %>?_method=PUT" method="POST" autocomplete="off">
+      <div class="form-group p-2 fs-3 container d-flex justify-content-around">
+        <input class="form-control m-2" type="text" value="<%= skill.name %>" name="name">
+        <input class="form-control m-2" type="number" value="<%= skill.level %>" name="level">
+        <button class="btn btn-primary m-2" type="submit">Add</button>
+      </div>
+    </form>
+  </div>
+  </div>
 
   <%- include('../partials/footer') %>
