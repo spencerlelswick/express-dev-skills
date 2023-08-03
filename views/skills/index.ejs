@@ -1,9 +1,9 @@
 <%- include('../partials/header') %>
 
   <% for( let i=0; i < skills.length; i++ ) { %>
-    <div class="container d-flex flex-row p-2 align-content-center justify-content-between">
+    <div class="container d-flex flex-row p-2  align-items-center justify-content-between">
 
-      <div class="p-2 fs-3 container d-flex justify-content-around">
+      <div class="p-2 fs-3 container d-flex  flex-column ">
         <a href="/skills/<%= skills[i].id %>">
           <%= skills[i].name %>
         </a>
@@ -11,6 +11,7 @@
           level: <%= skills[i].level %> / 10
         </p>
       </div>
+
       <div class="fs-2 ">
         <form action="/skills/<%= skills[i].id %>?_method=DELETE" method="POST">
           <button class="btn btn-danger  btn-sm" type="submit">remove</button>
