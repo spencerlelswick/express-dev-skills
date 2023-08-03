@@ -1,14 +1,21 @@
 <%- include('../partials/header') %>
 
   <% for( let i=0; i < skills.length; i++ ) { %>
-    <form action="/skills/<%= skills[i].id %>?_method=DELETE" method="POST">
-      <button type="submit">X</button>
-    </form>
-    <p>
+    <div class="container d-flex flex-row p-2 align-content-center justify-content-between">
 
-      <a href="/skills/<%= skills[i].id %>">
-        <%= skills[i].name %>
-      </a> | <%= skills[i].level %>
-    </p>
+      <div class="p-2 fs-3 container d-flex justify-content-around">
+        <a href="/skills/<%= skills[i].id %>">
+          <%= skills[i].name %>
+        </a>
+        <p>
+          level: <%= skills[i].level %> / 10
+        </p>
+      </div>
+      <div class="fs-2 ">
+        <form action="/skills/<%= skills[i].id %>?_method=DELETE" method="POST">
+          <button class="btn btn-danger  btn-sm" type="submit">remove</button>
+        </form>
+      </div>
+    </div>
     <% } %>
       <%- include('../partials/footer') %>
